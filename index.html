@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drum machine</title>
+  </head>
+  <body>
+    <button id="drum-0" onclick="play('Q')">
+        Q
+        <audio src="./samples/drums/bass_drum/MARS_VDM_kick_one_shot_606_standard_hi.wav" class="clip" id="Q">
+      </button>
+  </body>
+  <script>
+    function play(str) {
+      var audio = document.getElementById(str);
+      audio.play();
+    }
+
+    window.document.onkeyup = function (event) {
+      let keystroke = event.key;
+      if (keystroke === "q" || keystroke === "Q") {
+        play("Q");
+      }
+    };
+  </script>
+</html>
